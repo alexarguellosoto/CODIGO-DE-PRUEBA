@@ -1,4 +1,4 @@
-# 📚 Sistema Académico
+#  Sistema Académico
 
 ##  Descripción
 
@@ -14,9 +14,9 @@ Alumno → Carrera → Año Escolar → Clase
 
 ---
 
-# 🧩 Modelo de Entidades
+#  Modelo de Entidades
 
-## 1️ Alumno
+##  Alumno
 
 Representa a los estudiantes inscritos en la institución.
 
@@ -35,7 +35,7 @@ Representa a los estudiantes inscritos en la institución.
 
 ---
 
-## 2️⃣ Carrera
+##  Carrera
 
 Representa los programas académicos ofrecidos.
 
@@ -52,7 +52,7 @@ Representa los programas académicos ofrecidos.
 
 ---
 
-## 3️⃣ Año Escolar
+##  Año Escolar
 
 Representa cada nivel académico dentro de una carrera.
 
@@ -68,7 +68,7 @@ Representa cada nivel académico dentro de una carrera.
 
 ---
 
-## 4️ Clase
+##  Clase
 
 Representa las asignaturas impartidas en cada año escolar.
 

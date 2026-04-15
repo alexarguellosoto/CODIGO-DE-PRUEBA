@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema Académico</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Sistema Académico</h1>
+      <nav>
+        <button id="btn-config" class="active">Configuración</button>
+        <button id="btn-main">Principal</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="config-section" class="panel active">
+        <h2>Configuración</h2>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Registrar Carrera</h3>
+            <form id="carrera-form">
+              <input id="carrera-nombre" placeholder="Nombre de carrera" required />
+              <textarea id="carrera-descripcion" placeholder="Descripción" required></textarea>
+              <button type="submit">Guardar carrera</button>
+            </form>
+            <ul id="carreras-list"></ul>
+          </article>
+
+          <article class="card">
+            <h3>Registrar Año Escolar</h3>
+            <form id="anio-form">
+              <input id="anio-nombre" placeholder="Ejemplo: 1er Año" required />
+              <button type="submit">Guardar año</button>
+            </form>
+            <ul id="anios-list"></ul>
+          </article>
+
+          <article class="card">
+            <h3>Registrar Clase</h3>
+            <form id="clase-form">
+              <input id="clase-nombre" placeholder="Nombre de clase" required />
+              <input id="clase-creditos" type="number" min="1" placeholder="Créditos" required />
+              <button type="submit">Guardar clase</button>
+            </form>
+            <ul id="clases-list"></ul>
+          </article>
+
+          <article class="card">
+            <h3>Registrar Alumno</h3>
+            <form id="alumno-form">
+              <input id="alumno-nombre" placeholder="Nombre" required />
+              <input id="alumno-apellido" placeholder="Apellido" required />
+              <input id="alumno-email" type="email" placeholder="Email" required />
+              <input id="alumno-fecha" type="date" required />
+              <button type="submit">Guardar alumno</button>
+            </form>
+            <ul id="alumnos-list"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="main-section" class="panel">
+        <h2>Sesión Principal</h2>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Asociar Carrera con Año</h3>
+            <form id="asoc-carrera-anio-form">
+              <select id="asoc-carrera" required></select>
+              <select id="asoc-anio-carrera" required></select>
+              <button type="submit">Asociar</button>
+            </form>
+          </article>
+
+          <article class="card">
+            <h3>Asociar Año con Clase</h3>
+            <form id="asoc-anio-clase-form">
+              <select id="asoc-anio-clase" required></select>
+              <select id="asoc-clase" required></select>
+              <button type="submit">Asociar</button>
+            </form>
+          </article>
+
+          <article class="card">
+            <h3>Asociar Alumno con Año</h3>
+            <form id="asoc-alumno-anio-form">
+              <select id="asoc-alumno" required></select>
+              <select id="asoc-anio-alumno" required></select>
+              <button type="submit">Asociar</button>
+            </form>
+          </article>
+        </div>
+
+        <article class="card table-card">
+          <h3>Resumen de Alumnos</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Alumno</th>
+                <th>Carrera</th>
+                <th>Año</th>
+              </tr>
+            </thead>
+            <tbody id="resumen-body"></tbody>
+          </table>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
